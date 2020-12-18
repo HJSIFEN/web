@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>옷골라쇼핑몰</title>
+            <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,700&display=swap');
+                ul{
+                    display:block;
+                }
+                li{
+                    display:inline;
+                }
+                body{
+                    background-color: beige;
+                    width : 1500px;
+                }
+                div#wrapper{
+                    width : 100%;
+                    text-align : left;
+                    min-height : 300px;
+                    margin : 0 auto;
+                }
+                header, footer, nav, aside, section{
+                    
+                    margin:5px;
+                    padding : 10px;
+                }
+                header { 
+                    margin-left :15px;
+                    margin-right :15px;
+                    height : 50px;
+                    background-color: burlywood;
+                    border-bottom: 2px solid black;
+                    border-radius : 10px;
+                    box-shadow: 2px 2px grey;
+                }
+                nav, section, aside {
+                    float : left;
+                    height : 600px;
+                
+                }
+                table{
+                    text-align : center;
+                    
+                }
+              
+                section {
+                    
+                    width :1470px;
+                }
+                article {
+                    display: inline-block;
+                    width : 95%;     
+                    height : 96%;
+                    margin-left:30px;
+                }
+                td.form{   
+                    margin:0px;
+                    padding:10px;
+                    width:140px;
+                    height:140px;
+                }
+                #menu{     
+                    position :absolute;
+                    top:20px;               
+                    left:250px;
+                    padding :0;
+                    margin : 0;
+                    width:1150px;
+                }
+                #menu li {
+                    display : inline-block;
+                    padding:0px;
+                    text-align:center;
+                    border-top-left-radius:10px;
+                    border-top-right-radius: 10px;
+                    font-size:19px;
+                    font-weight: bolder;
+                    width:168px;
+                    padding-top:12.5px;
+                    padding-bottom:12.5px;
+                    cursor:pointer;
+                }
+                #menu li a{
+                    display:block;
+                }
+                
+                #menu li:hover{
+                    background-color: rgb(214, 134, 30, 0.4);
+                    text-decoration: underline;
+                }
+
+                #menu ul li:hover{
+                    text-decoration: underline;
+                    background-color: (0,0,0,0.2);
+                }
+                #icon {
+                    display : inline-block;
+                    position: absolute;
+                    margin :0px;
+                    top:20px;
+                    left: 50px;
+                    width : 250px; 
+                    height : 50px;
+                }
+                #icon p{
+                    font-family: 'Ubuntu', sans-serif;
+                    font-size: 20px;
+                    margin:0px;
+                }
+                #icon p::first-letter{
+                    font-size:2em;
+                    color:navy;
+                }
+                #menu ul{position: absolute; display : none; padding-top:50px; top:50px; background: rgb(226, 216, 170);padding:0px; margin:0px; border-bottom-right-radius: 10px;border-bottom-left-radius: 10px; z-index: 100;}
+                #menu ul li{display:block;  border-radius: 0px; padding:0px; margin:0px; text-align:center; width :168px; line-height: 43px; }
+                a { text-decoration:none ; color:#000000}
+                table {
+                    width: 100%;
+                    border: 1px solid #444444;
+                    border-collapse: collapse;
+                }
+                th{
+                    background-color: #b6b8a7;
+                }
+                
+            </style>
+            <script>
+                $(document).ready(function () {
+                    $("#menu li").hover(function(){
+                        $(this).find("ul").stop().fadeToggle(200);
+                    });
+                });     
+                           
+            </script>
+        </head>
+        <body>
+            <div id = "wrapper">
+                <header>
+                    <div id="icon">
+                        <p><a href = "/home">OS GOLLA <span style="font-size:12px; color:brown">shop</span></a></p>
+                    </div>
+                    <ul id="menu">
+                        <li><a href="/sub/TOP">TOP</a>
+                            <ul>
+                                <li><a>T-SHIRT</a></li>
+                                <li><a>SWEAT</a></li>
+                                <li><a>SHIRT</a></li>
+                                <li><a>NEAT</a></li>
+                            </ul></li>
+                        <li><a href="/sub/BOTTOM">BUTTOM</a>
+                            <ul>
+                                <li><a>T-SHIRT</a></li>
+                                <li><a>SWEAT</a></li>
+                                <li><a>SHIRT</a></li>
+                                <li><a>NEAT</a></li>
+                            </ul></li>
+                        <li><a href="/sub/OUTER">OUTER</a>
+                            <ul>
+                                <li><a>T-SHIRT</a></li>
+                                <li><a>SWEAT</a></li>
+                                <li><a>SHIRT</a></li>
+                                <li><a>NEAT</a></li>
+                            </ul></li>
+                        <li><a href="/sub/SHOES">SHOES</a>
+                            <ul>
+                                <li><a>T-SHIRT</a></li>
+                                <li><a>SWEAT</a></li>
+                                <li><a>SHIRT</a></li>
+                                <li><a>NEAT</a></li>
+                            </ul></li>
+                        <li><a href="/sub/ACCESSORY">ACCESSORY</a>
+                            <ul>
+                                <li><a>T-SHIRT</a></li>
+                                <li><a>SWEAT</a></li>
+                                <li><a>SHIRT</a></li>
+                                <li><a>NEAT</a></li>
+                            </ul>
+                        </li>
+                        <li style = "border-radius:10px"><a href="/BASKET">BASKET</a></li>
+                    </ul>
+                </header>
+                <div style="position:absolute; left:1400px;">
+                    <button style="z-index: 101; width:50px;"><a href="/admin">관 리</a></button>
+                </div>
+                <section>
+                    <table>
+                        <thead>
+                            <th scope="col" style="width:150px; height:47px;">id</th>
+                            <th style="width:200px; height: 47px">email</th>
+                            <th>권한</th>
+                            <th style="width:200px; height: 47px">휴대폰 번호</th>
+                            <th style="width:200px; height: 47px">주소</th>
+                            <th style="width:100px; height: 47px">구매횟수</th>
+                            <th style="width:100px; height: 47px">구매금액</th>
+                            <th>가입일시</th>
+                            <th>관리</th>
+                        <tbody>
+                            <% data.forEach(function(item, index) { %>
+                            <tr>
+                                <td><%= item.username %></td>
+                                <td><%= item.email %></td>
+                                <td><%= item.perm %></td>
+                                <td><%= item.phone %></td>
+                                <td><%= item.address %></td>
+                                <td><%= item.buy_cnt %></td>
+                                <td><%= item.buy_amount %></td>
+                                <td><%= item.date %></td>
+                                <form method="POST" ACTION="/user/delete">
+                                    <input type = "hidden" name="id" value="<%= item.id %>">
+                                    <td><input type="submit" value="삭제"/>
+                                </form>
+                                <button><a href="/user/edit/<%= item.id %>">편집</a></button>
+                            </td>
+                            </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                    <button><a href = "/admin/add">사용자추가</a></button>
+                </section>
+            </div>
+        </body>
+    </html>
